@@ -25,13 +25,15 @@ MenuController.prototype.bindEvents = function() {
 		theme: false,
 		header: {
 			left: '',
-			center: 'title',
+			center: '',
 			right: ''
 		},
 		defaultView: 'agendaDay'		
 	});
 	calendarContainer.on('swiperight', this.swipeRightHandler);
 	calendarContainer.on('swipeleft', this.swipeLeftHandler);
+	// disable vertical scrolling
+	calendarContainer.find('div.fc-time-grid-container').addClass('calendarContainer');
 	//$( "#daily" ).trigger( "tap" ); --> trigger tap event
 };
 
@@ -49,15 +51,18 @@ MenuController.prototype.tapHandler = function (event) {
 		} else if (that.selectedView === getMonthlyView()) {
 			calendarContainer.fullCalendar('changeView', 'month');
 		}
+		calendarContainer.find('div.fc-time-grid-container').addClass('calendarContainer');
 	});
 };
 
 MenuController.prototype.swipeLeftHandler = function(event) {
 	var calendarContainer = $('#calendar');
-	calendarContainer.fullCalendar('prev');
+	calendarContainer.fullCalendar('next');
+	calendarContainer.find('div.fc-time-grid-container').addClass('calendarContainer');
 };
 
 MenuController.prototype.swipeRightHandler = function(event) {
 	var calendarContainer = $('#calendar');
-	calendarContainer.fullCalendar('next');
+	calendarContainer.fullCalendar('prev');
+	calendarContainer.find('div.fc-time-grid-container').addClass('calendarContainer');
 };
