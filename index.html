@@ -5,12 +5,21 @@
 	<link rel="stylesheet" href="resources/debug/jquery.mobile-1.4.5.css" />
 	<script src="resources/debug/jquery-1.11.2.js"></script>
 	<script src="resources/debug/jquery.mobile-1.4.5.js"></script>
+	<script src="scripts/main.js"></script>
 <head>
 <body>
-<div data-role="page">
+<div data-role="page" id="daily">
 	<div data-role="header">...</div>
-	<div role="main" class="ui-content">...</div>
-	<div data-role="footer">...</div>
+	<div role="main" class="ui-content">View</div>
+	<div data-role="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a id="daily" href="#" class="ui-btn-active">Daily</a></li>
+				<li><a id="weekly" href="#">Weekly</a></li>
+				<li><a id="monthly" href="#">Monthly</a></li>
+			</ul>		
+		</div>
+	</div>
 </div>
 </body>
 </html>
