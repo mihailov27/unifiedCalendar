@@ -44,6 +44,7 @@ MenuController.prototype.tapHandler = function (event) {
 	var calendarContainer = $('#calendar');
 	var that = this;
 	$(document).ready(function(){
+		
 		if(that.selectedView === getDailyView()) {
 			calendarContainer.fullCalendar('changeView', 'agendaDay');
 		} else if (that.selectedView === getWeeklyView()) {

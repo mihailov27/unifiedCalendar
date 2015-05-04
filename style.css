@@ -2,3 +2,11 @@
 	height: auto;
 	overflow-y: hidden;
 }
+
+.calendarItemTransition {
+    position: absolute;
+    transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 3s ease-in-out; /** Firefox **/
+    -o-transition: all 3s ease-in-out; /** Opera **/
+}
