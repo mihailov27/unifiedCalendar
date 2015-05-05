@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Unified calendar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="resources/debug/jquery.mobile-1.4.5.css" />
+	<!--
+	<link rel="stylesheet" href="resources/debug/jquery.mobile.icons-1.4.5.css"/>
+	<link rel="stylesheet" href="resources/debug/jquery.mobile.theme-1.4.5.css"/>
+	-->
 	<script src="resources/debug/jquery-1.11.2.js"></script>
 	<script src="resources/debug/jquery.mobile-1.4.5.js"></script>
 	<!-- full calendar -->
@@ -15,9 +20,13 @@
 	<script src="scripts/main.js"></script>
 <head>
 <body>
+<!-- Daily view page -->
 <div data-role="page" id="home">
-	<div data-role="header" data-position="fixed"></div>
-	<div role="main" class="ui-content" data-theme="c"><div id="calendar"></div></div>
+	<div data-role="header" data-position="fixed" class="ui-header">
+		<h1 class="ui-title" role="heading" aria-level="1" data-theme="a">Date placeholder</h1>
+		<a href="#options" data-iconpos="notext" data-icon="gear" class="ui-btn-right" data-corners="true" data-shadow="true" data-iconshadow="true">Options</a>
+	</div>
+	<div role="main" class="ui-content"><div id="calendar"></div></div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -28,5 +37,14 @@
 		</div>
 	</div>
 </div>
+
+<!-- Weekly view page -->
+
+<!-- Monthly view page -->
+<!--
+<div data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" id="options" data-theme="b" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ">
+	<div class="ui-panel-inner"><form class="userform"></div>
+</div>
+-->
 </body>
 </html>
